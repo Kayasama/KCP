@@ -369,7 +369,7 @@ namespace System.Net.Sockets.Kcp
             }
             else
             {
-                if (BitConverter.IsLittleEndian)
+                if (BitConverter.IsBigEndian)
                 {
                     BinaryPrimitives.WriteUInt32BigEndian(buffer.Slice(offset), conv);
                     buffer[offset + 4] = cmd;
